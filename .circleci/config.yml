@@ -1,5 +1,5 @@
 jobs:
-  build-macos:
+  test:
     macos:
       xcode: 12.5.1
   build: 
@@ -22,7 +22,7 @@ workflows:
   version: 2
   test_build:
     jobs:
-      - build-macos
+      - test
       - build:
           requires:
             - test
